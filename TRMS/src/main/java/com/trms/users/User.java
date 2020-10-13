@@ -19,7 +19,7 @@ public class User {
 	@GeneratedValue(generator = "USER_ID_SEQUENCE", strategy = GenerationType.SEQUENCE)
 	private long id;
 	
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String username;
 	
 	@Column
