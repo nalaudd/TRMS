@@ -26,6 +26,7 @@ public class Account {
 	private double deposit;
 	
 	@OneToOne
+	@Column(nullable = true)
 	private User user;
 
 	public long getId() {

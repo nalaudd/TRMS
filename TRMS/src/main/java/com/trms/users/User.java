@@ -25,20 +25,23 @@ public class User {
 	@Column
 	private String password;
 	
-	@Column
+	@Column(name = "FIRST_NAME")
 	private String firstName;
 	
-	@Column
+	@Column(name = "MIDDLE_NAME")
 	private String middleName;
 	
-	@Column
+	@Column(name = "LAST_NAME")
 	private String lastName;
 	
 	@Column
 	private String email;
 	
-	@Column
+	@Column(name = "PHONE_NUMBER")
 	private int phoneNumber;
+	
+	@Column(name = "USER_LEVEL")
+	private int userLevel;
 	
 	@Column
 	private boolean active;
