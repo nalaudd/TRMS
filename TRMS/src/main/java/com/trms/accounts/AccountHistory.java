@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +23,7 @@ public class AccountHistory {
 	@GeneratedValue(generator = "ACCT_HISTORY_ID_SEQ", strategy = GenerationType.SEQUENCE)
 	private long id;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@Column(nullable = true)
 	private Account account;
 	

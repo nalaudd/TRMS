@@ -2,6 +2,7 @@ package com.trms.accounts;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,7 +26,7 @@ public class Account {
 	@Column
 	private double deposit;
 	
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY)
 	@Column(nullable = true)
 	private User user;
 
